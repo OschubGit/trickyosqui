@@ -1,0 +1,312 @@
+<html lang="es">
+ <head>
+  <title>
+   Event Page
+  </title>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .header {
+            background: linear-gradient(to right, #2a2a72, #009ffd);
+            color: white;
+            padding: 20px 0;
+        }
+        .discount-badge {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .user-review {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .user-review .rating {
+            color: gold;
+        }
+        .user-review .username {
+            font-weight: 500;
+        }
+        .user-review .comment {
+            font-size: 0.9rem;
+        }
+        .calendar {
+            margin-top: 20px;
+        }
+        .calendar .day {
+            font-weight: 700;
+        }
+        .calendar .date {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 2px;
+        }
+        .calendar .active {
+            background-color: #007bff;
+            color: white;
+        }
+        .price {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .price .original {
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 10px;
+        }
+        .price .discount {
+            color: red;
+        }
+        .description {
+            margin-top: 20px;
+            box-shadow: 0px 0px 8px 3px #ededed;
+            border-radius: 6px;
+            padding: 16px;
+        }
+        .description h3 {
+            font-weight: 700;
+        }
+        .description p {
+            font-size: 0.9rem;
+        }
+        .description .more {
+            color: #007bff;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            color: #6c757d;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: 30px;
+        }
+        .swiper {
+      width: 100%;
+      height: 400px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-slide {
+      width: 80%;
+      margin-right: 2px !important;
+    }
+
+    .swiper-slide:nth-child(2n) {
+      width: 60%;
+    }
+
+    .swiper-slide:nth-child(3n) {
+      width: 40%;
+    }
+
+    .booking-info, .user-reviews{
+        box-shadow: 0px 0px 8px 3px #ededed;
+    border-radius: 6px;
+    padding: 16px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        min-width: 100% !important;
+        width: 100% !;
+        
+      }
+    }
+    @media (max-width: 500px) {
+      .container {
+        min-width: 100% !important;
+        width: 100% !;
+
+      }
+    }
+  </style>
+ </head>
+ <body>
+     <!-- Swiper -->
+     <div class="swiper mySwiper">
+         <div class="swiper-wrapper">
+           <div class="swiper-slide">
+             <img src="https://store.theory11.com/cdn/shop/products/Disposition-T11_08717.jpg?crop=center&height=1024&v=1662137848&width=2000"/>
+           </div>
+           <div class="swiper-slide">
+             <img src="https://store.theory11.com/cdn/shop/products/vlcsnap-2022-08-24-14h45m11s237.png?crop=center&height=1024&v=1662137848&width=2000"/>
+           </div>
+           <div class="swiper-slide">
+             <img src="https://images.unsplash.com/photo-1506362802973-bd1717de901c?q=80&w=2937&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+           </div>
+           <div class="swiper-slide">
+             <img src="https://ellusionist.com/cdn/shop/files/NN79935.jpg?v=1698938408&width=1200"/>
+           </div>
+         </div>
+         <div class="swiper-pagination"></div>
+       </div>
+       <div class="header text-center">
+           <h1>
+            Mágia de cerca. Trebol Show
+           </h1>
+          </div>
+  <div class="container">
+   <div class="row mt-4">
+    <div class="col-8 col-xs-12 col-sm-12">
+            <img alt="Magician performing a trick with a mystical blue background" class="img-fluid" src="./IMAGE2.png"/>
+            <div class="user-reviews mt-4">
+             <div class="user-review">
+              <span class="rating">
+               <i class="fas fa-star">
+               </i>
+               10 CARLOS
+              </span>
+           
+              <div class="comment">
+               He visto varias veces a Óscar y cada vez que este paseando le llevaré gente. Esta Sala TÚ con su magia de cerca es impresionante. El foro íntimo para ver la magia tan cerca es...
+              </div>
+             </div>
+             <div class="user-review">
+              <span class="rating">
+               <i class="fas fa-star">
+               </i>
+               10 ANÓNIMO
+              </span>
+              <div class="comment">
+               Un espectáculo para no perdérselo si se visita Madrid. Es sorprendente y divertido, se pasa el tiempo volando. Al tener un aforo tan reducido te sientes parte del espectáculo. El rey de trébol...
+              </div>
+             </div>
+             <!-- Repeat for each user review -->
+            </div>
+            <div class="user-reviews mt-4">
+                <div class="feature">
+                    <img src="./IMAGE3.png" width="100%" /> 
+                </div>
+                </div>
+                <div class="user-reviews mt-4">
+                    <img src="./IMAGE5.png" width="100%" alt="">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.681429967423!2d-0.38820732402592456!3d39.47652507160631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f5ac00be41f%3A0xfd95ea029910c1be!2sOff%20Artes%20Esc%C3%A9nicas%20%7C%20Sala%20y%20Escuela%20de%20Teatro%20en%20Val%C3%A8ncia!5e0!3m2!1ses!2ses!4v1704209126454!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+    </div>
+    <div class="col-4 col-xs-12 col-sm-12">
+            <div class="booking-info">
+             <div class="price">
+              <span class="original">
+               18€
+              </span>
+              <span class="discount">
+               10€
+              </span>
+             </div>
+             <button class="btn btn-primary btn-block">
+              COMPRAR
+             </button>
+             <div class="small text-muted mt-2">
+              Una vez confirmado, no se admitirán cambios ni cancelaciones
+             </div>
+            </div>
+            <div class="description mt-4">
+             <h3>
+              Descripción
+             </h3>
+             <p>
+               Óscar Fernández, ilusionista profesional. Show en exclusiva en la prestigiosa Sala Off de Valencia.</p>
+               <p>
+               Su espectáculo "El Rey de trébol" es un show de magia de cerca, limitado a 25 PERSONAS, para poder vivir la experiencia al máximo, en el que prácticamente todos los espectadores participarán de una forma u otra. Un humor elegante, y una buena dosis de emoción te harán flipar a lo grande, ¡te lo aseguro!
+               </p>
+               <p>
+               Verás cosas nunca vistas en otros shows, magia variada y muy moderna. Cartas, relojes, anillos, billetes y algunos objetos no tan comunes, serán los culpables de trasladarte a un mundo increíble lleno de misterio, humor y mucha cara dura... ¡Ven a verlo!
+               
+               EDAD RECOMENDADA: A partir de 8-10 años.
+             </p>
+             <!-- <div class="more">
+              Mostrar más
+             </div> -->
+            </div>
+    </div>
+   </div>
+   <div class="row mt-4">
+    <div class="col-12 col-xs-12 col-sm-12">
+        <div class="user-reviews">
+            <img
+            width="100%"
+            style="margin-top: 15px;"
+            src="./IMAGE6.png"
+            srcset="./IMAGEN9.png 500w"
+            sizes="(max-width: 500px) 400px"
+            alt="Descripción de la imagen">
+        </div>
+        <img src="" alt="">
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-12 col-xs-12 col-sm-12">
+        <div class="user-reviews">
+            <img
+            width="100%"
+            src="./IMAGE7.png"
+            srcset="./IMAGE7MOBILE.png 500w""
+            sizes="(max-width: 500px) 400px"
+            alt="Descripción de la imagen">
+            <img
+            width="100%"
+            style="margin-top: 15px;"
+            src="./IMAGE8.png"
+            srcset="./IMAGE8MOBILEL.png 500w""
+            sizes="(max-width: 500px) 400px"
+            alt="Descripción de la imagen">
+        </div>
+        <img src="" alt="">
+    </div>
+   </div>
+</div>
+<div class="footer bg-black">
+ <p>
+  © 2023 OscarFdez. All rights reserved.
+ </p>
+</div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+ </body>
+</html>
